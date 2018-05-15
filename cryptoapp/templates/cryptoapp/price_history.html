@@ -1,0 +1,58 @@
+<html>
+    <head>
+        
+        <title>Learn D3.js</title>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <style type="text/css">
+           canvas{
+              width:1000px !important;
+              height:400px !important;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Crypto coins</a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-dark" onclick="changeMode()">Dark Mode</button>
+              </li>
+            </ul>
+
+              
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" id="coin_name" onkeyup="search_by_name()" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </nav>
+        <div class="col-md-6" style="display:inline-block">
+          <div class="topleft" style="text-align:center; float:left;">
+            <h2 class="sectiontext">Top 10 Items</h2>
+            <br/>
+            <canvas id="myChart" width="320" height="320"></canvas>
+          </div>
+            <button onclick="buildPage(1)"> Day</button>
+            <button onclick="buildPage(7)"> Weekly</button>
+            <button onclick="buildPage(30)"> Month</button>
+        </div>
+<!--
+        <div>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+-->
+        
+        
+        
+          
+          
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+        <script src="../../static/js/get_prices.js"></script>
+    </body>
+</html>

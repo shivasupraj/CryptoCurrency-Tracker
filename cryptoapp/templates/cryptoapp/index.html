@@ -1,0 +1,73 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/crypto.css' %}">
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Crypto coins</a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-dark" onclick="changeMode()">Dark Mode</button>
+              </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      USD
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">USD</a>
+                      <a class="dropdown-item" href="#">EUR</a>
+                      <a class="dropdown-item" href="#">INR</a>
+                      <a class="dropdown-item" href="#">GBP</a>
+                      <a class="dropdown-item" href="#">BTC</a>
+                    </div>
+                  </li>
+            </ul>
+
+              
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" id="coin_name" onkeyup="search_by_name()" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </nav>
+<!--
+        <div class="jumbotron">
+            <h1 class="display-4">Crypto coins</h1>
+        </div>
+-->
+        
+<!--
+        <table class="table borderless">
+            <tr>
+                <td></td>
+                <td>
+                    <input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="Light Mode" data-off="Dark Mode">
+                </td>
+            </tr>
+            <tr>
+                <td>Search coins</td>
+                <td><input type="text" id="coin_name" onkeyup="search_by_name()"></td>
+            </tr>
+        </table>
+-->
+     
+        
+        
+        
+    </body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/crypto.js' %}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script type="text/javascript" src="{% static 'js/get_prices.js' %}"></script>
+-->
+</html>
